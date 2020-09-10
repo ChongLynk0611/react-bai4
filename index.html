@@ -17,11 +17,11 @@
         'Buy food',
         'Make dinner'
         ];
-        const elementTodos = []
-        for(const todo of todos){
-            const element = <li></li>
-            elementTodos.push(element);
-        }
+         
+        const elementTodos = todos.map(function(todo){
+            const element = <li>{todo}</li>
+            return element;
+        });
         const listTodos = React.createElement('ul', null,...elementTodos);
         const root = document.getElementById('root');
         ReactDOM.render(listTodos, root);
